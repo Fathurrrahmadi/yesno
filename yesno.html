@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>YN fathur</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h1>yes no</h1>
+  <h2>API : https://yesno.wtf/api </h2>
+  <h2>loading gifnya lemot. ditunggu aja</h2>
+  <div id="container">
+    <button id="btn">pencet aku</button>
+    <div id="result"></div>
+  </div>
+  <script>
+    $(document).ready(function() {
+      $('#btn').click(function() {
+        $.ajax({
+          url: 'https://yesno.wtf/api',
+          dataType: 'json',
+          success: function(data) {
+            $('#result').html('<img src="' + data.image + '">');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
